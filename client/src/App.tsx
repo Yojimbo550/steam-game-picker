@@ -34,10 +34,9 @@ useEffect(() => {
       setLoading(true);
       setError("");
       const response = await fetch(
-        `https://steam-game-picker-cytuej97z-alexandrs-projects-99e14c99.vercel.app/games/${steamId}`
+        `https://steam-game-picker2-lg09tu6td-alexandrs-projects-99e14c99.vercel.app/games/${steamId}`
         );
-        // https://steam-game-picker-cytuej97z-alexandrs-projects-99e14c99.vercel.app/
-        // `https://steam-proxy.onrender.com/games/${steamId}`
+        
     
     const data = await response.json();
     const gamesArray = data.response.games;
