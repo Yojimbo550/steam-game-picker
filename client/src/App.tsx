@@ -34,7 +34,7 @@ useEffect(() => {
       setLoading(true);
       setError("");
       const response = await fetch(
-        `https://steam-game-picker2-lg09tu6td-alexandrs-projects-99e14c99.vercel.app/games/${steamId}`
+        `https://steam-game-picker.onrender.com/games/${steamId}`
         );
         
     

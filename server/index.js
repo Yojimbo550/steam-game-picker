@@ -53,5 +53,5 @@ app.get("/games/:steamId", async (req, res) => {
 });
 
 app.listen(3002, () => {
-  console.log("Server started on http://localhost:3002");
+  console.log("Server started on https://steam-game-picker.onrender.com/games/76561198068773718");
 });
