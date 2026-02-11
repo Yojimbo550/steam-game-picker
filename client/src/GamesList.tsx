@@ -3,7 +3,7 @@ type Props = {
   games: any[];
 };
 
-function GamesList({ games }: Props) {
+function GamesList({  }: Props) {
     return (  
         <ul>
             {/* {games.map((game) => (

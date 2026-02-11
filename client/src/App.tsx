@@ -31,7 +31,7 @@ useEffect(() => {
 
   const fetchGames = async () => {
     try {
-      setloading(true);
+      setLoading(true);
       setError("");
       const response = await fetch(
         `https://steam-game-picker-cytuej97z-alexandrs-projects-99e14c99.vercel.app/games/${steamId}`
@@ -49,7 +49,7 @@ useEffect(() => {
     setError("Ошибка загрузки игр")
   }
   finally {
-    setloading(false)
+    setLoading(false)
   }
 };
   fetchGames();
@@ -63,16 +63,16 @@ function setId(id: string) {
     <div className='flex flex-col mt-6 items-center gap-20' >
       <label htmlFor="">Введи свой стим айди, чтобы не думать во что поиграть сегодня</label>
       <SteamIdForm
-      steamId={steamId}
+      // steamId={steamId}
       onClick={setId}
       />
       
       {loading ? <Loader/> : <GameSuggestion selectedGame={selectedGame}/>}
       <GamesList
-      games={games}
+      
       />
       <SuggestGameControl
-      games={games}
+      // games={games}
       onSuggestGame={handleSuggestGame}
       />
       {/* <GameSuggestion
@@ -80,7 +80,8 @@ function setId(id: string) {
       
       /> */}
       {/* {steamId} */}
-      
+      {loading && <div>Loading...</div>}
+    { error && <div>{error}</div>} 
     </div>
   )
 }
