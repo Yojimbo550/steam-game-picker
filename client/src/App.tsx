@@ -72,7 +72,6 @@ function setId(id: string) {
       
       />
       <SuggestGameControl
-      // games={games}
       onSuggestGame={handleSuggestGame}
       />
       {/* <GameSuggestion
