@@ -1,4 +1,9 @@
-function GamesList({games}) {
+
+type Props = {
+  games: any[];
+};
+
+function GamesList({ games }: Props) {
     return (  
         <ul>
             {/* {games.map((game) => (

@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react'
+import  { useCallback, useEffect, useState } from 'react'
 import SteamIdForm from './SteamIdForm';
 import GamesList from './GamesList';
 import GameSuggestion from './GameSuggestion';
@@ -7,11 +7,11 @@ import Loader from './Loader';
 
 function App()  {
 
-const [steamId , setSteamId] = useState("")
-const [games, setGames] = useState([]);
-const [loading, setloading] = useState();
-const [error, setError] = useState();
-const [selectedGame, setSelectedGame] = useState("");
+const [steamId, setSteamId] = useState<string>("");
+const [games, setGames] = useState<any[]>([]);
+const [selectedGame, setSelectedGame] = useState<any | null>(null);
+const [loading, setLoading] = useState<boolean>(false);
+const [error, setError] = useState<string>("");
 
 
 const handleSuggestGame = useCallback(() => {
@@ -56,9 +56,8 @@ useEffect(() => {
 },
 [steamId]);
 
-function setId(id) {
-  
-setSteamId(id)
+function setId(id: string) {
+  setSteamId(id);
 }
   return (
     <div className='flex flex-col mt-6 items-center gap-20' >

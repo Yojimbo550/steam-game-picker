@@ -1,9 +1,14 @@
 import { useState } from "react";
 
-function SteamIdForm({onClick}) {
+type Props = {
+  onClick: (id: string) => void;
+  event: React.ChangeEvent<HTMLInputElement>
+};
+
+function SteamIdForm({onClick}: Props) {
 
     const [inputValue, setinputValue] = useState("");
-    function handleSubmit(event) {
+    function handleSubmit(event: React.ChangeEvent<HTMLInputElement>) {
     event.preventDefault();
     onClick(inputValue.trim());
 }

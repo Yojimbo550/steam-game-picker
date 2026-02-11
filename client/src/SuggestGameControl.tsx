@@ -1,4 +1,9 @@
-function SuggestGameControl({games,onSuggestGame}) {
+type Props = {
+  onSuggestGame: () => void;
+};
+
+
+function SuggestGameControl({ onSuggestGame }: Props){
     return ( 
     
     <div>
