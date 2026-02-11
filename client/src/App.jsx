@@ -34,7 +34,7 @@ useEffect(() => {
       setloading(true);
       setError("");
       const response = await fetch(
-        `http://localhost:3002/games/${steamId}`
+        `https://steam-proxy.onrender.com/games/${steamId}`
         );
     
     const data = await response.json();
