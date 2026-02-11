@@ -2,13 +2,15 @@ import { useState } from "react";
 
 type Props = {
   onClick: (id: string) => void;
-  event: React.ChangeEvent<HTMLInputElement>
+  
 };
 
 function SteamIdForm({onClick}: Props) {
 
-    const [inputValue, setinputValue] = useState("");
-    function handleSubmit(event: React.ChangeEvent<HTMLInputElement>) {
+    const [inputValue, setInputValue] = useState("");
+
+
+    function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     onClick(inputValue.trim());
 }
@@ -19,7 +21,9 @@ function SteamIdForm({onClick}: Props) {
 
         <input
         className="border p-2"
-        onChange={event => setinputValue(event.target.value)}
+        onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+  setInputValue(event.target.value)
+}
         value={inputValue}
         placeholder="Введи свой стим ID"
        />
