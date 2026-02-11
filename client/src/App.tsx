@@ -73,7 +73,9 @@ function setId(id: string) {
       <SuggestGameControl
       onSuggestGame={handleSuggestGame}
       />
-       {selectedGame && (
+       {loading && <Loader />}
+
+{!loading && selectedGame && (
   <GameSuggestion selectedGame={selectedGame} />
 )}
       {/* {steamId} */}
