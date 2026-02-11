@@ -66,7 +66,7 @@ function setId(id: string) {
       onClick={setId}
       />
       
-      {loading ? <Loader/> : <GameSuggestion selectedGame={selectedGame}/>}
+      
       <GamesList
       
       />
