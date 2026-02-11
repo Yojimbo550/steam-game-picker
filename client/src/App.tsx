@@ -73,10 +73,7 @@ function setId(id: string) {
       <SuggestGameControl
       onSuggestGame={handleSuggestGame}
       />
-      {/* <GameSuggestion
-      selectedGame={selectedGame}
-      
-      /> */}
+       {selectedGame && <GameSuggestion selectedGame={selectedGame} />}
       {/* {steamId} */}
       {loading && <div>Loading...</div>}
     { error && <div>{error}</div>} 
