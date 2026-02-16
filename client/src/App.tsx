@@ -60,7 +60,7 @@ function setId(id: string) {
 }
   return (
     <div className='flex flex-col mt-6 items-center gap-20' >
-      <label htmlFor="">Введи свой стим айди, чтобы не думать во что поиграть сегодня</label>
+      <label htmlFor="">Введи свой SteamID для подгрузки списка игр, аккаунт должен быть публичным</label>
       <SteamIdForm
       // steamId={steamId}
       onClick={setId}
@@ -70,12 +70,12 @@ function setId(id: string) {
       <GamesList
       
       />
-      <SuggestGameControl
-      onSuggestGame={handleSuggestGame}
-      />
+      {!loading && games.length > 0 && (
+  <SuggestGameControl onSuggestGame={handleSuggestGame} />
+)}
        {loading && <Loader />}
 
-{!loading && selectedGame && (
+{!loading &&  selectedGame && (
   <GameSuggestion selectedGame={selectedGame} />
 )}
       {/* {steamId} */}

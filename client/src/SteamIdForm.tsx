@@ -25,7 +25,7 @@ function SteamIdForm({onClick}: Props) {
   setInputValue(event.target.value)
 }
         value={inputValue}
-        placeholder="Введи свой стим ID"
+        placeholder="Введи свой SteamID"
        />
         <button
         className="bg-gray-300 border rounded p-2"

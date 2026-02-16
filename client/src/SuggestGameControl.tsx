@@ -8,7 +8,7 @@ function SuggestGameControl({ onSuggestGame }: Props){
     
     <div>
 
-        <button className="border p"
+        <button className="border p-3 rounded"
         onClick={onSuggestGame}
         >
             Во что поиграть сегодня?
